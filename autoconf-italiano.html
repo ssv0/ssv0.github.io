@@ -6,6 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/default.css">
+	<script>
+		//pick a translation (see available message catalogs in lib/l10n)
+		SSlocal.setItem("locale","it-IT");
+	</script>
 	<script src="./lib/init.js"></script>
 </head>
 <body>
@@ -43,9 +47,6 @@
 			//comment line below if you want persistence by default, or alter the time messages are kept on server
 			SSsession.setItem("expiry_current", 86400000000); // in MICROseconds, here 1 day
 			
-			//pick a translation (see available message catalogs in lib/l10n)
-			SSlocal.setItem("locale","it-IT");
-
 			//leave the rest alone
 			if(await settings.redeemInvitationURL(inv_text) === true) {
 				SSsession.setItem("channel_current",share_kp.shareAddress);
