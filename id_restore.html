@@ -32,7 +32,7 @@
 			const author_kp = JSON.parse(s);
 			if ((Object.keys(author_kp).length == 2) && ("address" in author_kp) && ("secret" in author_kp)) {
 				settings.author = author_kp;
-				outputdiv.insertAdjacentHTML("beforeend", (author_kp.address + ': ' +t("successfully loaded.") +'</p>'));
+				outputdiv.insertAdjacentHTML("beforeend", ('<p>' + author_kp.address + ': ' +t("successfully loaded.") +'</p>'));
 			} else {
 				outputdiv.insertAdjacentHTML("beforeend", (t("Does not look like a valid ID file (address + key)")));
 			}
